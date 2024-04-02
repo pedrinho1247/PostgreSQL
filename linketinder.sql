@@ -61,3 +61,21 @@ VALUES
   ('Candidato 3', 'Sobrenome 3', '1988-03-03', 'candidato3@example.com', '34567890123', 'Brasil', 34567000, 'Descrição do Candidato 3', 'senha789'),
   ('Candidato 4', 'Sobrenome 4', '1987-04-04', 'candidato4@example.com', '45678901234', 'Brasil', 45678000, 'Descrição do Candidato 4', 'senhaabc'),
   ('Candidato 5', 'Sobrenome 5', '1992-05-05', 'candidato5@example.com', '56789012345', 'Brasil', 56789000, 'Descrição do Candidato 5', 'senhadef');
+
+-- Inserir competências dos candidatos
+INSERT INTO competencias ("competencias", "id_candidato", "id_empresa")
+VALUES
+  ('Java, Python, SQL', 1, 1), -- Candidato 1, Empresa A
+  ('JavaScript, HTML, CSS', 2, 2), -- Candidato 2, Empresa B
+  ('C++, C#, .NET', 3, 3), -- Candidato 3, Empresa C
+  ('Python, R, Data Analysis', 4, 4), -- Candidato 4, Empresa D
+  ('Java, JavaScript, React', 5, 5); -- Candidato 5, Empresa E
+
+-- Inserir vagas das empresas
+INSERT INTO vagas ("id_empresa", "nome", "descricao", "local")
+VALUES
+  (1, 'Desenvolvedor Full Stack', 'Desenvolvimento de aplicações web utilizando diversas tecnologias.', 'São Paulo, SP'), -- Empresa A
+  (2, 'Frontend Developer', 'Desenvolvimento de interfaces de usuário para web.', 'Rio de Janeiro, RJ'), -- Empresa B
+  (3, 'Engenheiro de Software', 'Desenvolvimento e manutenção de sistemas de software.', 'Belo Horizonte, MG'), -- Empresa C
+  (4, 'Data Scientist', 'Análise de dados e desenvolvimento de modelos preditivos.', 'Porto Alegre, RS'), -- Empresa D
+  (5, 'Java Developer', 'Desenvolvimento de aplicações empresariais em Java.', 'Curitiba, PR'); -- Empresa E
